@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">KotlinYouTube</string>
+    <string name="course_lesson_title">course Lesson Title</string>
+    <string name="textView">TextView</string>
+    <string name="imagenGeneral">imagen</string>
 </resources>
