@@ -3,4 +3,7 @@
     <string name="course_lesson_title">course Lesson Title</string>
     <string name="textView">TextView</string>
     <string name="imagenGeneral">imagen</string>
+    <string name="channel_name">Channel Name</string>
+    <string name="video_title">Video Title</string>
+    <string name="imagen1">imagen1</string>
 </resources>

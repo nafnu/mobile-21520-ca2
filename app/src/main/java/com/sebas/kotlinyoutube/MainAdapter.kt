@@ -18,7 +18,7 @@ class MainAdapter(val homeFeed: HomeFeed): RecyclerView.Adapter<CustomViewHolder
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
-        val layoutInflater = LayoutInflater.from(parent?.context)
+        val layoutInflater = LayoutInflater.from(parent.context)
         val cellForRow = layoutInflater.inflate(R.layout.video_row, parent, false)
         return CustomViewHolder(cellForRow)
 
@@ -26,18 +26,18 @@ class MainAdapter(val homeFeed: HomeFeed): RecyclerView.Adapter<CustomViewHolder
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
 
-        val video = homeFeed.videos.get(position)
-        holder?.view?.textView_video_title?.text = video.name
+        val video = homeFeed.videos[position]
+        holder.view.textView_video_title?.text = video.name
 
-        holder?.view?.textView_channel_name?.text = video.channel.name
+        holder.view.textView_channel_name?.text = video.channel.name
 
-        val thumbnailImageView = holder?.view?.imageView2
-        Picasso.with(holder?.view?.context).load(video.imageUrl).into(thumbnailImageView)
+        val thumbnailImageView = holder.view.imageView2
+        Picasso.with(holder.view.context).load(video.imageUrl).into(thumbnailImageView)
 
-        val channelProfileImageView = holder?.view?.imageView_channel_profile
-        Picasso.with(holder?.view?.context).load(video.channel.profileImageUrl).into(channelProfileImageView)
+        val channelProfileImageView = holder.view.imageView_channel_profile
+        Picasso.with(holder.view.context).load(video.channel.profileImageUrl).into(channelProfileImageView)
 
-        holder?.video = video
+        holder.video = video
 
     }
 
@@ -46,8 +46,8 @@ class CustomViewHolder(val view: View, var video: Video? = null): RecyclerView.V
 
 
     companion object {
-        val VIDEO_TITLE_KEY = "VIDEO_TITLE"
-        val VIDEO_ID_KEY = "VIDEO_ID"
+       const val VIDEO_TITLE_KEY = "VIDEO_TITLE"
+        const val VIDEO_ID_KEY = "VIDEO_ID"
     }
 
     init {
